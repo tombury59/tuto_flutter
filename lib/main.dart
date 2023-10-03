@@ -60,7 +60,11 @@ class _MyHomePageState extends State<MyHomePage> {
   void _randomValeur() {
     setState(() {
       Random random = new Random();
-      _valeur = random.nextInt(_counter);
+      if (_counter == 0) {
+        _valeur = 0;
+      } else {
+        _valeur = random.nextInt(_counter);
+      }
     });
   }
 
@@ -101,7 +105,7 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
         ),
         Container(
-            color: Colors.green,
+            color: Color.fromARGB(255, 63, 224, 197),
             alignment: Alignment.center,
             child: ListView(children: [
               Align(
