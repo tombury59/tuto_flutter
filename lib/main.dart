@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
-import 'dart:math';
+
+import 'package:tuto_flutter/screens/BottomNavigationBar.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const NavBar());
 }
-
+/*
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
@@ -41,13 +42,13 @@ class _MyHomePageState extends State<MyHomePage> {
 
   void _incrementCounter() {
     setState(() {
-      _counter += 10;
+      _counter += 100;
     });
   }
 
   void _decrementCounter() {
     setState(() {
-      _counter -= 10;
+      _counter -= 100;
     });
   }
 
@@ -183,3 +184,4 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 }
+*/
