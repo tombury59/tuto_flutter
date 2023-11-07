@@ -17,11 +17,11 @@ class _GenerateurBody extends State<GenerateurBody> {
   void _randomValeur() {
     setState(() {
       Random random = new Random();
-      if (_counter == 0) {
+      /* if (_counter == 0) {
         _valeur = 0;
-      } else {
-        _valeur = random.nextInt(_counter);
-      }
+      } else {*/
+      _valeur = random.nextInt(10000);
+      //}
     });
   }
 

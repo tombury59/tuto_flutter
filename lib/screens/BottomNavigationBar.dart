@@ -1,8 +1,13 @@
 import 'package:flutter/material.dart';
-
+import 'package:tuto_flutter/models/custom_icons_icons.dart';
+//import 'package:json_theme/json_theme.dart';
 import 'Accueil.dart';
 import 'Generateur.dart';
 import 'Parametre.dart';
+
+import 'package:json_theme/json_theme.dart';
+import 'package:flutter/services.dart';
+import 'dart:convert';
 
 class NavBar extends StatelessWidget {
   const NavBar({Key? key});
@@ -17,7 +22,7 @@ class NavBar extends StatelessWidget {
             ColorScheme.fromSwatch(primarySwatch: Colors.indigo).copyWith(
           secondary: Colors.deepOrange,
         ),
-        appBarTheme: AppBarTheme(
+        appBarTheme: const AppBarTheme(
           backgroundColor: Colors.indigo,
         ),
       ),
@@ -76,9 +81,10 @@ class _NavBarState extends State<NavBarState> {
               currentPageIndex = index;
             });
           },
-          items: [
+          items: const [
             BottomNavigationBarItem(
-              icon: Icon(Icons.home),
+              icon: Icon(CustomIcons.play),
+              activeIcon: Icon(CustomIcons.pause),
               label: 'Accueil',
             ),
             BottomNavigationBarItem(
