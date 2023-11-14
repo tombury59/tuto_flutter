@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tuto_flutter/models/custom_icons_icons.dart';
 
 class AccueilBody extends StatefulWidget {
   const AccueilBody({Key? key}) : super(key: key);
@@ -80,7 +81,7 @@ class _AccueilBody extends State<AccueilBody> {
                 alignment: Alignment.bottomCenter,
                 child: FloatingActionButton(
                   onPressed: _resetCounter,
-                  child: Icon(Icons.auto_fix_normal),
+                  child: Icon(CustomIcons.play),
                 ),
               ),
             ],

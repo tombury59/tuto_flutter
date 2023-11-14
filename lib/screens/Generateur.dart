@@ -9,10 +9,11 @@ class GenerateurBody extends StatefulWidget {
 }
 
 class _GenerateurBody extends State<GenerateurBody> {
-  int _counter = 0;
+  // int _counter = 0;
   int currentPageIndex = 0;
   int index = 0;
   int _valeur = 0;
+  int _rare = 0;
 
   void _randomValeur() {
     setState(() {
@@ -22,6 +23,22 @@ class _GenerateurBody extends State<GenerateurBody> {
       } else {*/
       _valeur = random.nextInt(10000);
       //}
+
+      if (_valeur == 1 ||
+          _valeur == 2 ||
+          _valeur == 3 ||
+          _valeur == 4 ||
+          _valeur == 5 ||
+          _valeur == 6 ||
+          _valeur == 7 ||
+          _valeur == 8 ||
+          _valeur == 9) {
+        _rare = _valeur;
+      }
+
+      if (_rare != 0) {
+        _valeur = _rare;
+      }
     });
   }
 
